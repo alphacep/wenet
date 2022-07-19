@@ -66,6 +66,7 @@ class Recognizer {
     decode_options_ = std::make_shared<wenet::DecodeOptions>();
     post_process_opts_ = std::make_shared<wenet::PostProcessOptions>();
 
+    decode_options_->chunk_size = -1;
     decode_options_->rescoring_weight = 0.5;
     decode_options_->ctc_weight = 0.3;
     decode_options_->reverse_weight = 0.0;
